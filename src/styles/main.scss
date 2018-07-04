@@ -1,0 +1,26 @@
+/* 
+    Author: Mohamad Kazemiraz
+*/
+
+/* 
+    Base Styles
+*/
+@import './base/_variables.scss';
+@import './base/_mixins.scss';
+@import './base/_normalize.scss';
+@import './base/_rtl.scss';
+@import './base/_base.scss';
+
+/* 
+    Modules Styles
+*/
+
+@import './modules/_buttons.scss';
+@import './modules/_typography.scss';
+
+/* 
+    Helpers Styles
+*/
+
+@import './helpers/_responsive.scss';
+@import './helpers/_spinner.scss'
