@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { NotFoundModule } from './shared/pages/not-found/not-found.module';
 import { AppRoutingModule } from './app-routing.module';
 import { LayoutsModule } from './layouts/layouts.module';
+import { DashboardLoginModule } from './shared/pages/dashboard-login/dashboard-login.module';
+import { DashboardRegisterModule } from './shared/pages/dashboard-register/dashboard-register.module';
 
 @NgModule({
   declarations: [
@@ -14,6 +16,8 @@ import { LayoutsModule } from './layouts/layouts.module';
     BrowserModule,
     AppRoutingModule,
     LayoutsModule,
+    DashboardLoginModule,
+    DashboardRegisterModule,
     NotFoundModule
   ],
   providers: [],
