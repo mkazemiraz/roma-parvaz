@@ -1,0 +1,20 @@
+.btn {
+    box-shadow: none !important;
+    border-radius: 2px !important;
+    
+}
+.btn.float-left{
+    float: left;
+}
+.btn.middle{
+    border-radius: 0px !important;
+}
+.btn.first{
+    border-radius: 0px 2px 2px 0px !important;
+}
+.btn.last{
+    border-radius: 2px 0px 0px 2px !important;
+}
+.btn.btn-min{
+    min-width: 100px;
+}

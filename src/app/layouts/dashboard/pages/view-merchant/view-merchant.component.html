@@ -1,0 +1,35 @@
+<div class="main-content">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="contents-wrapper">
+          <div class="content-header clearfix">
+            <h1>مشاهده ی پذیرنده</h1>
+          </div>
+          <div class="content-body">
+            <div class="row merchant">
+              <div class="col-xs-3">
+                <span>شناسه ی پذیرنده :</span>
+                <span class="content">{{merchant?.id}}</span>
+              </div>
+              <div class="col-xs-3">
+                <span>نام پذیرنده :</span>
+                <span class="content">{{merchant?.firstName}}</span>
+              </div>
+              <div class="col-xs-3">
+                <span>ایمیل :</span>
+                <span class="content">{{merchant?.email}}</span>
+              </div>
+              <div class="col-xs-3">
+                <span>تلفن تماس :</span>
+                <span class="content">{{merchant?.phoneNumber}}</span>
+              </div>
+            </div>
+          </div>
+          <div class="content-footer">
+              <button class="waves-effect waves-light btn btn-custom btn-min yellow darken-4" type="button" (click)="editMerchant()"> ویرایش </button>
+              <button type="submit" class="waves-effect waves-light btn btn-custom btn-min" [routerLink]="['/dashboard/merchant-acceptance']">لغو</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

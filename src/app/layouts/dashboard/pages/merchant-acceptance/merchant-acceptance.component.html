@@ -1,5 +1,84 @@
 <!-- Content Header (Page header) -->
-<section class="content-header">
+<!-- <section class="content-header">
 	<h1>مدیریت پذیرنده ها</h1>
-</section>
+</section> -->
 <!-- Content Header (Page header) -->
+
+<div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+			  <h3 class="modal-title" id="myModalLabel">حذف پذیرنده</h3>
+			</div>
+			<div class="modal-body">
+				<p>
+						آیا از حذف پذیرنده مطمئن هستید ؟ 
+				</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn red darken-4 " data-dismiss="modal">انصراف</button>
+				<button type="button" class="btn green darken-4 confirm" (click)="deleteMerchant()">تایید</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<div class="main-content">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="contents-wrapper">
+				<div class="content-header clearfix">
+					<h1>مدیریت پذیرنده</h1>
+					<button class="btn waves-effect waves-light float-left" [routerLink]= "['add']">
+						<i class="fa fa-plus" aria-hidden="true"></i>
+						<span class="fix-cell">
+							افزودن پذیرنده ی جدید
+						</span>
+					</button>
+				</div>
+				<div class="content-body">
+					<div class="table-responsive">
+						<table class="table md table-bordered table-hover">
+							<thead>
+								<tr>
+									<th>شناسه</th>
+									<th>نام</th>
+									<th>ایمیل</th>
+									<th>تلفن تماس</th>
+									<th>تاریخ ثبت نام</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr *ngFor="let merchant of merchants">
+									<td>{{merchant.id}}</td>
+									<td>{{merchant.firstName}}</td>
+									<td>{{merchant.email}}</td>
+									<td>{{merchant.phoneNumber}}</td>
+									<td>{{merchant.hireDate}}</td>
+									<td class="text-center">
+										<button type="submit" class="btn green darken-4 first" (click)="viewMerchant(merchant)">
+											<i class="fa fa-eye" aria-hidden="true"></i>
+											<span class="fix-cell">مشاهده</span>
+										</button>
+										<button type="submit" class="btn yellow darken-4 middle" (click)="editMerchant(merchant)">
+											<i class="fa fa-pencil" aria-hidden="true"></i>
+											<span class="fix-cell">ویرایش</span>
+										</button>
+										<button type="submit" class="btn red darken-4 last" data-toggle="modal" data-target="#delete" (click)="selectMerchant(merchant)">
+											<i class="fa fa-trash" aria-hidden="true"></i>
+											<span class="fix-cell">حذف</span>
+										</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

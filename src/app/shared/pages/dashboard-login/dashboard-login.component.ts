@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthenticationService } from '../../sevices/authentication.service';
+import { AuthenticationService } from '../../sevices/authentication/authentication.service';
 import { Router } from '@angular/router';
+import { first } from 'rxjs/operators';
 
 @Component({
   selector: 'app-dashboard-login',
@@ -22,9 +23,8 @@ export class DashboardLoginComponent implements OnInit {
       'password': event.target.querySelector('#password').value,
       'rememberMe': false
     };
-    this.authenticationService.login(credential).then((res) =>{
-        this.router.navigate(['/']);
+    this.authenticationService.login(credential).pipe(first()).subscribe( res => {
+     this.router.navigate(['/']);
     });
   }
-
 }

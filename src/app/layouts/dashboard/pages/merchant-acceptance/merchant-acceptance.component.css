@@ -1,32 +1,3 @@
-.content-header {
-    background: transparent;
-    position: relative;
-    padding: 15px 15px 0 15px;
-}
-.content-header>h1 {
-    margin: 0;
-    font-size: 2.2rem;
-    color: #D0DBEF;
-}
-.content-header>.breadcrumb {
+.modal-footer .confirm{
     float: left;
-    background: transparent;
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 12px;
-    padding: 7px 5px;
-    position: absolute;
-    top: 15px;
-    left: 10px;
-    border-radius: 2px;
-    color: #fafafa;
-}
-.breadcrumb::before{
-    content: none !important;
-}
-.breadcrumb>li {
-    display: inline-block;
-}
-.content-header>.breadcrumb>li>a>.fa, .content-header>.breadcrumb>li>a>.glyphicon, .content-header>.breadcrumb>li>a>.ion {
-    margin-left: 5px;
 }

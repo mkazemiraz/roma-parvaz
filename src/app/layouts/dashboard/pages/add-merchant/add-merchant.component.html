@@ -1,0 +1,41 @@
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+        <div class="contents-wrapper">
+            <div class="content-header clearfix">
+              <h1>افزودن پذیرنده</h1>
+            </div>
+            <div class="content-body">
+              <div class="row">
+                  <form action="" role="form" (submit)="addMerchant($event)" id="add" method="POST">
+                      <div class="form-content">
+                          <div class="col-xs-4">
+                              <div class="form-group input-field">
+                                  <label for="name">نام آژانس</label>
+                                  <input type="text" id="name" name="name" class="form-control input-light-color input-lg" autocomplete="off">
+                              </div>
+                          </div>
+                          <div class="col-xs-4">
+                              <div class="form-group input-field">
+                                  <label for="email">ایمیل</label>
+                                  <input type="text" id="email" name="email" class="form-control input-light-color input-lg" autocomplete="off">
+                              </div>
+                          </div>
+                          <div class="col-xs-4">
+                              <div class="form-group input-field">
+                                  <label for="email">شماره تلفن</label>
+                                  <input type="text" id="phoneNumber" name="phoneNumber" class="form-control input-light-color input-lg" autocomplete="off">
+                              </div>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+            </div>
+            <div class="content-footer">
+                <button class="waves-effect waves-light btn btn-custom btn-min" type="submit" form="add"> افزودن </button>
+                <button type="submit" class="waves-effect waves-light btn btn-custom btn-min" [routerLink]="['/dashboard/merchant-acceptance']">لغو</button>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>

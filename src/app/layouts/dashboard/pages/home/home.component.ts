@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthenticationService } from '../../../../shared/sevices/authentication.service';
+import { AuthenticationService } from '../../../../shared/sevices/authentication/authentication.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -13,10 +13,10 @@ export class HomeComponent implements OnInit {
               private router: Router) { }
 
   ngOnInit() {
-    this.login = this.authenticationService.checkAuthorized();
-    if(!this.login) {
-      this.router.navigate(['/dashboard/login']);
-    }
+    // this.login = this.authenticationService.checkAuthorized();
+    // if(!this.login) {
+    //   this.router.navigate(['/dashboard/login']);
+    // }
   }
 
 }

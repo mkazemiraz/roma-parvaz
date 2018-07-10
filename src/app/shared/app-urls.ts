@@ -4,5 +4,8 @@ export const urls = {
     'authentication': {
         'login': prefix + 'api/authenticate',
         'register':  prefix + 'api/merchants'
+    },
+    'merchants': {
+        'merchants': prefix + 'api/merchants'
     }
 }

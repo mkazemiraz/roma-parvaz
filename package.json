@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "compile:sass": "node-sass src/styles/main.scss src/styles.css"
+    "compile:sass": "node-sass src/styles/main.scss src/styles.css -w"
   },
   "private": true,
   "dependencies": {

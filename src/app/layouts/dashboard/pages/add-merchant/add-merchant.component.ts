@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthenticationService } from '../../sevices/authentication/authentication.service';
+import { AuthenticationService } from '../../../../shared/sevices/authentication/authentication.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-dashboard-register',
-  templateUrl: './dashboard-register.component.html',
-  styleUrls: ['./dashboard-register.component.scss']
+  selector: 'app-add-merchant',
+  templateUrl: './add-merchant.component.html',
+  styleUrls: ['./add-merchant.component.css']
 })
-export class DashboardRegisterComponent implements OnInit {
+export class AddMerchantComponent implements OnInit {
 
   constructor(private authenticationService: AuthenticationService,
               private router: Router) { }
@@ -15,7 +15,7 @@ export class DashboardRegisterComponent implements OnInit {
   ngOnInit() {
   }
 
-  registerUser(event) {
+  addMerchant(event){
     event.preventDefault();
     let credential = {
       'firstName': event.target.querySelector('#name').value,
@@ -23,7 +23,7 @@ export class DashboardRegisterComponent implements OnInit {
       'email': event.target.querySelector('#email').value
     };
     this.authenticationService.register(credential).then((res) =>{
-      this.router.navigate(['/']);
+      this.router.navigate(['/dashboard/merchant-acceptance']);
     });
   }
 }

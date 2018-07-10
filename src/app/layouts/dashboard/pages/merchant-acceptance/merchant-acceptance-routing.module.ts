@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { RouterModule, Routes } from '@angular/router';
 import { MerchantAcceptanceComponent } from './merchant-acceptance.component';
+import { AuthGuard } from '../../../../shared/guards/auth.guard';
 
 const routes: Routes = [
-  {path: '/kazi', component: MerchantAcceptanceComponent}
+  {path: '', component: MerchantAcceptanceComponent}
 ]
 
 @NgModule({
