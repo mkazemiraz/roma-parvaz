@@ -1,0 +1,19 @@
+<div class="main-sidebar">
+    <section class="sidebar clearfix" style="height: auto;">
+        <a [routerLink]="['/']" class="logo">رما پرواز</a>
+        <div class="menu-wrapper">
+          <ul>
+            <li>
+              <a [routerLink]="['/dashboard']"  [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                <span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span>
+                <span style="font-size: 1.3rem;vertical-align: middle;">خانه</span>
+              </a>
+              <a [routerLink]="['/dashboard/merchant-acceptance']"  [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                <span class="icon"><i class="fa fa-address-book-o" aria-hidden="true"></i></span>
+                <span style="font-size: 1.3rem;vertical-align: middle;">مدیریت پذیرنده ها</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+    </section>
+</div>

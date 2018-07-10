@@ -1,6 +1,8 @@
+const prefix = 'http://192.168.10.112:8080/';
+
 export const urls = {
     'authentication': {
-        'login': '/login',
-        'register': '/register'
+        'login': prefix + 'api/authenticate',
+        'register':  prefix + 'api/merchants'
     }
 }

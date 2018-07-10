@@ -18,8 +18,8 @@ export class DashboardRegisterComponent implements OnInit {
   registerUser(event) {
     event.preventDefault();
     let credential = {
-      'username': event.target.querySelector('#email').value,
-      'password': event.target.querySelector('#password').value,
+      'firstName': event.target.querySelector('#name').value,
+      'phoneNumber': event.target.querySelector('#phoneNumber').value,
       'email': event.target.querySelector('#email').value
     };
     this.authenticationService.register(credential).then((res) =>{

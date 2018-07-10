@@ -1,7 +1,6 @@
 <header class="clearfix">
  
   <nav class="navbar navbar-static-top" role="navigation">
-      <a [routerLink]="['/']" class="logo">Ryan Travel</a>
     <div class="navbar-header">
       <a href="#" class="sidebar-toggle" data-toggle="push-menu"
       role="button"> <span class="sr-only">Toggle navigation</span> <span
@@ -46,6 +45,20 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="max-height: 50px;"> 
 					  <span class="hidden-xs">herman</span>
           </a>
+          <ul class="dropdown-menu dropdown-user">
+            <li class="user-header">
+              <i class="fa fa-user fa-fw fa-5x" aria-hidden="true" style="color: #fff;"></i>
+              <p>herman - مدیر فروش<small>تاریخ عضویت : </small></p>
+            </li>
+            <li class="user-footer clearfix">
+                <div style="float:right">
+                  <a class="waves-effect waves-light btn btn-no-margin" href="/">پروفایل</a>
+                </div>
+                <div style="float:left">
+                  <a class="waves-effect waves-light btn btn-no-margin" [routerLink]="['/dashboard/login']">خروج</a>
+                </div>
+            </li>
+          </ul>
         <!-- /.dropdown-user -->
         </li>
       </ul>

@@ -8,12 +8,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboard-login.component.scss']
 })
 export class DashboardLoginComponent implements OnInit {
-
+  public login: boolean;
   constructor(private authenticationService: AuthenticationService,
               private router: Router) { }
 
   ngOnInit() {
-    
   }
 
   loginUser(event){
@@ -24,7 +23,7 @@ export class DashboardLoginComponent implements OnInit {
       'rememberMe': false
     };
     this.authenticationService.login(credential).then((res) =>{
-      this.router.navigate(['/']);
+        this.router.navigate(['/']);
     });
   }
 

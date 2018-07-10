@@ -7,7 +7,13 @@ import { DashboardComponent } from './dashboard.component';
 
 const routes: Routes = [
   {
-      path: '', component: DashboardComponent, loadChildren: './pages/home/home.module#HomeModule'
+      path: '', component: DashboardComponent, loadChildren: './pages/home/home.module#HomeModule',
+  },
+  {
+    path: 'merchant-acceptance', component: DashboardComponent, loadChildren: './pages/merchant-acceptance/merchant-acceptance.module#MerchantAcceptanceModule'
+  },
+  {
+    path: 'merchant', component: DashboardComponent, loadChildren: './pages/merchant-acceptance/merchant-acceptance.module#MerchantAcceptanceModule'
   }
 ];
 

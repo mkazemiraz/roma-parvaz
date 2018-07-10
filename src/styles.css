@@ -1847,6 +1847,15 @@ nav ul a span.badge {
 .pull-left {
   float: right !important; }
 
+a {
+  text-decoration: none !important; }
+
+.wrapper {
+  height: 100%; }
+
+body {
+  background-color: #1B2944 !important; }
+
 /* 
     Modules Styles
 */

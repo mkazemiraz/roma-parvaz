@@ -7,19 +7,19 @@ import { HttpClientModule, HttpClient, HttpParams, HttpHeaders } from '@angular/
   providedIn: 'root'
 })
 export class AuthenticationService {
-  private token  = 'kazi';
+  private test_token = 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOiJST0xFX0FETUlOLFJPTEVfVVNFUiIsImV4cCI6MTUzMTI4NDM1N30.yt7y42f8QWuOiOudlEenqey6jjncnIz0X63sBgLYc6-M9NeXimnly0vwgvYXtIHdusgVfePDqDxavhdVMt3JEg';
+  private token: string  = null;
   private urls = urls.authentication;
-  private headers = new HttpHeaders().set('Authorization', this.token);
+  private headers = new HttpHeaders().set('Authorization', this.test_token);
 
   constructor( private http: HttpClient ) { }
 
   login(data) {
-    return this.http.post(this.urls.login, data, {
-      headers: this.headers
-    }).toPromise().then((res) => {
-      return res;
+    return this.http.post(this.urls.login, data).toPromise().then((res) => {
+      //this.token = res.id_token;
+      return true;
     }).catch(e => {
-      console.log(e);
+      return false;
     });
   }
 
@@ -31,5 +31,14 @@ export class AuthenticationService {
     }).catch(e => {
       console.log(e);
     });
+  }
+
+  checkAuthorized(){
+    if (this.token){
+      return true;
+    }
+    else{
+      return false;
+    }
   }
 }
