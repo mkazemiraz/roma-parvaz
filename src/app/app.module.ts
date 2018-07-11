@@ -7,13 +7,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { LayoutsModule } from './layouts/layouts.module';
 import { DashboardLoginModule } from './shared/pages/dashboard-login/dashboard-login.module';
 import { DashboardRegisterModule } from './shared/pages/dashboard-register/dashboard-register.module';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
     AppRoutingModule,
     LayoutsModule,
     DashboardLoginModule,

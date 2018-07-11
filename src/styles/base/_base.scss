@@ -5,5 +5,12 @@ a {
     height: 100%;
 }
 body{
-    background-color: #1B2944 !important;
+    background-color: #283555 !important;
  }
+ .mat-form-field-label{
+    height: 50px !important;
+}
+.mat-form-field.mat-focused .mat-form-field-ripple {
+    background-color: #00796b !important;
+}
+

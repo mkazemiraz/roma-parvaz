@@ -17,6 +17,15 @@ const routes: Routes = [
   },
   {
     path: 'merchant-acceptance/view/:id', component: DashboardComponent, loadChildren: './pages/view-merchant/view-merchant.module#ViewMerchantModule'
+  },
+  {
+    path: 'user-management', component: DashboardComponent, loadChildren: './pages/user-management/view/view.module#ViewModule'
+  },
+  {
+    path: 'user-management/new', component: DashboardComponent, loadChildren: './pages/user-management/add/add.module#AddModule'
+  },
+  {
+    path: 'merchant-management', component: DashboardComponent, loadChildren: './pages/merchant-management/merchant-management.module#MerchantManagementModule'
   }
 ];
 

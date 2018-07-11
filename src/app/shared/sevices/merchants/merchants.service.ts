@@ -9,12 +9,12 @@ import { AuthenticationService } from '../authentication/authentication.service'
 })
 export class MerchantsService {
   private urls = urls.merchants;
-  constructor( private http: HttpClient,
-               private authenticationService: AuthenticationService) { }
+  constructor(private http: HttpClient,
+              private authenticationService: AuthenticationService) { }
 
   private headers = new HttpHeaders().set('Authorization', this.authenticationService.test_token);
   getAllMerchants() {
-    return this.http.get(this.urls.merchants).pipe(map((res: any) =>{
+    return this.http.get(this.urls.merchants, {headers: this.headers}).pipe(map((res: any) =>{
       return res;
     }))
   }

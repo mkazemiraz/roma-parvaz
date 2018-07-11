@@ -1,3 +1,28 @@
+@import '~@angular/material/theming';
+@include mat-core();
+.alternate-theme {
+    $alternate-primary: mat-palette($mat-teal, 700);
+    $alternate-accent:  mat-palette($mat-yellow, 400);
+    $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent);
+  
+    @include angular-material-theme($alternate-theme);
+  }
+  
+  .alternate-theme button{
+      min-width: 150px;
+      margin-left: 30px;
+      &:first{
+          margin-left: 0px;
+      }
+  }
+  
+  .mat-form-field{
+      width: 100%;
+  }
+  .mat-form-field-infix {
+      padding: 10px 0 !important;
+  }
+
 header{
     position: relative;
     max-height: 100px;

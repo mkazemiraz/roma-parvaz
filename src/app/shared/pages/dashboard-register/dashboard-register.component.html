@@ -1,26 +1,28 @@
-<div class="login-page">
+<div class="login-page alternate-theme" dir='rtl'>
     <div class="row">
         <div class="col-md-4 col-xs-12 col-md-offset-4">
             <img src="assets/images/logo.png" width="150px" class="user-avatar" />
             <h1>به رما پرواز خوش آمدید !</h1>
-            <form action="" role="form" (submit)="registerUser($event)">
+            <form [formGroup]="option" method="POST" (submit)="registerUser($event)">
                 <div class="form-content">
-                    <div class="form-group input-field">
-                        <label for="name">نام آژانس</label>
-                        <input type="text" id="name" name="name" class="form-control input-light-color input-lg" autocomplete="off">
-                    </div>
-                    <div class="form-group input-field">
-                        <label for="email">ایمیل</label>
-                        <input type="text" id="email" name="email" class="form-control input-light-color input-lg" autocomplete="off">
-                    </div>
-                    <div class="form-group input-field">
-                        <label for="email">شماره تلفن</label>
-                        <input type="text" id="phoneNumber" name="phoneNumber" class="form-control input-light-color input-lg" autocomplete="off">
+                    <div class="form-group">
+                        <mat-form-field color="primary">
+                            <input matInput id="name" autocomplete="off" placeholder="نام آژانس" style="font-size: 16px; height: 30px;">
+                        </mat-form-field>
                     </div>
                     <div class="form-group">
-                        <button class="waves-effect waves-light btn btn-custom" [routerLink]="['/dashboard/login']"> ورود </button>
-                        
-                        <button type="submit" class="waves-effect waves-light btn btn-custom">عضویت</button>
+                        <mat-form-field color="primary">
+                            <input matInput id="email" autocomplete="off" placeholder="ایمیل" type="text" style="font-size: 16px;height: 30px;">
+                        </mat-form-field>
+                    </div>
+                    <div class="form-group">
+                        <mat-form-field color="primary">
+                            <input matInput id="phoneNumber" autocomplete="off" placeholder="شماره تماس" type="text" style="font-size: 16px;height: 30px;">
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <button mat-raised-button color="warn" type="button" [routerLink]="['/dashboard/login']">ورود</button>
+                        <button mat-raised-button color="primary" type="submit">عضویت</button>
                     </div>
                 </div>
             </form>

@@ -7,5 +7,8 @@ export const urls = {
     },
     'merchants': {
         'merchants': prefix + 'api/merchants'
+    },
+    'users': {
+        'users': prefix + 'api/users'
     }
 }

@@ -5,14 +5,11 @@
     min-height: 100%;
     width: 220px;
     background-color: #283555;
-    -webkit-box-shadow: -9px -5px 69px -23px rgba(0,0,0,0.42);
-    -moz-box-shadow: -9px -5px 69px -23px rgba(0,0,0,0.42);
-    box-shadow: -9px -5px 69px -23px rgba(0,0,0,0.42);
     z-index: 10000;
-    -webkit-transition: -webkit-transform .3s ease-in-out,width .3s ease-in-out;
-    -moz-transition: -moz-transform .3s ease-in-out,width .3s ease-in-out;
-    -o-transition: -o-transform .3s ease-in-out,width .3s ease-in-out;
-    transition: transform .3s ease-in-out,width .3s ease-in-out;
+    -webkit-transition: -webkit-transform .3s ease-in-out,all .3s ease-in-out;
+    -moz-transition: -moz-transform .3s ease-in-out,all .3s ease-in-out;
+    -o-transition: -o-transform .3s ease-in-out,all .3s ease-in-out;
+    transition: transform .3s ease-in-out,all .3s ease-in-out;
 }
 .sidebar {
     padding-bottom: 10px;

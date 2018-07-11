@@ -1,4 +1,4 @@
-<header class="clearfix">
+<header class="clearfix alternate-theme">
  
   <nav class="navbar navbar-static-top" role="navigation">
     <div class="navbar-header">
@@ -52,10 +52,10 @@
             </li>
             <li class="user-footer clearfix">
                 <div style="float:right">
-                  <a class="waves-effect waves-light btn btn-no-margin" href="/">پروفایل</a>
+                  <a mat-raised-button color="primary" href="/">پروفایل</a>
                 </div>
                 <div style="float:left">
-                  <a class="waves-effect waves-light btn btn-no-margin" [routerLink]= "['/dashboard/login']" (click)= "onLogout()">خروج</a>
+                  <a mat-raised-button color="warn" [routerLink]= "['/dashboard/login']" (click)= "onLogout()">خروج</a>
                 </div>
             </li>
           </ul>

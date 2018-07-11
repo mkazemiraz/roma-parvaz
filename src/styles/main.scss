@@ -24,4 +24,6 @@
 */
 
 @import './helpers/_responsive.scss';
-@import './helpers/_spinner.scss'
+@import './helpers/_spinner.scss';
+
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';

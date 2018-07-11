@@ -12,6 +12,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url(~@angular/material/prebuilt-themes/indigo-pink.css);
 html {
   line-height: 1.15;
   /* 1 */
@@ -1857,7 +1858,13 @@ a {
   height: 100%; }
 
 body {
-  background-color: #1B2944 !important; }
+  background-color: #283555 !important; }
+
+.mat-form-field-label {
+  height: 50px !important; }
+
+.mat-form-field.mat-focused .mat-form-field-ripple {
+  background-color: #00796b !important; }
 
 /* 
     Modules Styles
@@ -1987,5 +1994,13 @@ form .input-lg {
 /* 
     Helpers Styles
 */
+@media only screen and (max-width: 1200px) {
+  .main-sidebar {
+    right: -220px !important; }
+  .content-wrapper {
+    margin-right: 0px !important; }
+  .main-footer {
+    margin-right: 0px !important; } }
+
 .kazi {
   margin: 0%; }

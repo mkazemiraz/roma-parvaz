@@ -8,7 +8,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AuthenticationService {
-  public test_token = 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOiJST0xFX0FETUlOLFJPTEVfVVNFUiIsImV4cCI6MTUzMTI4NDM1N30.yt7y42f8QWuOiOudlEenqey6jjncnIz0X63sBgLYc6-M9NeXimnly0vwgvYXtIHdusgVfePDqDxavhdVMt3JEg';
+  public test_token = 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOiJST0xFX0FETUlOLFJPTEVfVVNFUiIsImV4cCI6MTUzMzc5NDgwNn0.nOY9R2x1pn2QzkZPOCQuBw71MmdsDYDiwikSTm0DkPS2H5vdordAebGISnu7PD42k50eVlICaNrnKmRLpvVLqQ';
   private token: string  = null;
   private urls = urls.authentication;
   private headers = new HttpHeaders().set('Authorization', this.test_token);
